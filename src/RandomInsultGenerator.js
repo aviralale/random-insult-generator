@@ -42,15 +42,19 @@ export default function RandomInsultGenerator() {
   const handleCopyToClipboard = () => {
     let text = document.getElementById("myBox");
     text.select();
-    navigator.clipboard.writeText(text.value);
-    let alertPrompt = document.getElementById('prompt');
-    alertPrompt.style.opacity = '1';
-    alertPrompt.innerText = "Copied to clipboard!";
-    setInterval(() => {
+    navigator.clipboard.writeText(text.value).then(() => {
+      let alertPrompt = document.getElementById('prompt');
+      alertPrompt.style.opacity = '1';
+      alertPrompt.innerText = "Copied to clipboard!";
+      setTimeout(() => {
         alertPrompt.style.opacity = '0';
-    }, 4000);
-    
+      }, 4000);
+    }).catch(error => {
+        alertPrompt.innerText = "Failed to copy!";
+      // Handle the error, e.g., by showing an error message to the user.
+    });
   };
+  
   return (
     <div>
       <div className="quote-container">
