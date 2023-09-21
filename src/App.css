@@ -8,6 +8,10 @@
   color: black;
   font-family: 'Poppins', sans-serif;
 }
+body{
+  background: repeating-linear-gradient(to right, red, red 50px, rgb(104, 0, 0) 50px, rgb(104, 0, 0) 100px);
+  background-size: 150% 150%;
+}
 .App {
   width: 100vw;
   height: 100vh;
@@ -17,12 +21,10 @@
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  background: repeating-linear-gradient(to right, red, red 50px, rgb(104, 0, 0) 50px, rgb(104, 0, 0) 100px);
-    background-size: 150% 150%;
+
 }
 .quote-container {
   background: white;
-  height: 490px;
   width: 95vw;
   box-shadow: 10px 10px rgb(0, 0, 0);
   display: flex;
@@ -31,10 +33,9 @@
   align-items: center;
 }
 .quote {
-  height: 300px;
   text-transform: uppercase;
   transition: all 0.2s ease;
-  font-size: 5rem;
+  font-size: 3em;
 }
 .quote:hover {
   color: red;
