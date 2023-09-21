@@ -39,11 +39,11 @@ export default function RandomInsultGenerator() {
     setRandomInsult(insult);
   };
 
+  let alertPrompt = document.getElementById('prompt');
   const handleCopyToClipboard = () => {
     let text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value).then(() => {
-      let alertPrompt = document.getElementById('prompt');
       alertPrompt.style.opacity = '1';
       alertPrompt.innerText = "Copied to clipboard!";
       setTimeout(() => {
