@@ -3,7 +3,7 @@ import IconBxsQuoteLeft from './IconBxsQuoteLeft';
 import IconBxsQuoteRight from './IconBxsQuoteRight';
 
 export default function RandomInsultGenerator() {
-      const insults = [
+    const insults = [
         "You're as useful as a screen door on a submarine.",
         "If you were any slower, you'd be going backward.",
         "You're not the sharpest tool in the shed, are you?",
@@ -23,7 +23,12 @@ export default function RandomInsultGenerator() {
         "It's a wonder you can remember to breathe.",
         "I'd agree with you but then we'd both be wrong.",
         "You're the human equivalent of a participation trophy.",
-        "You're so unoriginal, even your insults are boring."
+        "You're so unoriginal, even your insults are boring.",
+        "If your IQ was any lower, we'd need to water you twice a week.",
+        "You're like a vacuum, all noise and no substance.",
+        "The only thing faster than your stupidity is your incompetence.",
+        "Even a broken clock is right twice a day, but not you.",
+        "You're a walking advertisement for birth control."
       ];
     
       const [randomInsult, setRandomInsult] = useState('');
